@@ -3,140 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Master Clean HQ</title>
+  <title>MasterClean HQ</title>
   <style>
-    /* General Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
-      text-align: center;
     }
-
     header {
       background-color: #0056b3;
       color: white;
       padding: 20px;
+      text-align: center;
     }
-
-    header h1 {
-      margin: 0;
-    }
-
     nav {
-      background-color: #0056b3;
+      background-color: #003f8a;
       padding: 10px;
+      text-align: center;
     }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    nav ul li {
-      position: relative;
-      margin: 0 10px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
+    nav a {
       color: white;
-      padding: 10px;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .dropdown {
+      position: relative;
       display: inline-block;
     }
-
-    nav ul li a:hover {
-      background-color: #003f8a;
-      border-radius: 4px;
-    }
-
-    /* Dropdown Styles */
-    nav ul li .dropdown-content {
+    .dropdown-content {
       display: none;
       position: absolute;
-      background-color: white;
-      min-width: 200px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 12px;
       z-index: 1;
     }
-
-    nav ul li .dropdown-content a {
-      color: #333;
-      padding: 10px;
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown .disabled-link {
+      pointer-events: none;
+      color: white;
+      cursor: default;
+      text-decoration: none;
+    }
+    .dropdown-content a {
+      color: #0056b3;
       text-decoration: none;
       display: block;
+      margin: 5px 0;
     }
-
-    nav ul li .dropdown-content a:hover {
-      background-color: #f4f4f4;
+    .dropdown-content a:hover {
+      text-decoration: underline;
     }
-
-    nav ul li:hover .dropdown-content {
-      display: block;
-    }
-
     section {
+      max-width: 800px;
       margin: 20px auto;
       padding: 20px;
-      max-width: 600px;
-      background: white;
+      background-color: white;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-
     footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #0056b3;
+      color: white;
       margin-top: 20px;
-      font-size: 0.9em;
-      color: #666;
-    }
-
-    footer a {
-      color: #0056b3;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="82D8963E-6935-4292-B8A4-9AA118CB2770.WEBP" alt="Master Clean HQ Logo" width="150">
     <h1>Welcome to MasterClean HQ</h1>
   </header>
-
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li class="dropdown">
-        <a href="services.html" class="dropbtn">Services</a>
-        <div class="dropdown-content">
-          <a href="window-cleaning.html">Window Cleaning</a>
-          <a href="residential-cleaning.html">Residential Cleaning</a>
-          <a href="commercial-cleaning.html">Commercial Cleaning</a>
-          <a href="post-construction-cleaning.html">Post-Construction Cleaning</a>
-        </div>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+      <a class="disabled-link">Services</a>
+      <div class="dropdown-content">
+        <a href="commercial-cleaning.html">Commercial Cleaning</a>
+        <a href="post-construction-cleaning.html">Post-Construction Cleaning</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
   </nav>
-
   <section>
     <h2>Your Commercial Cleaning Solution</h2>
     <p>
       We specialize in professional non-residential cleaning services for businesses of all sizes. Let us handle your cleaning needs while you focus on what matters most — your business.
     </p>
   </section>
-
   <footer>
-    <p>© 2024 MasterClean HQ. All Rights Reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
+    © 2024 MasterClean HQ. All Rights Reserved. | <a href="privacy-policy.html" style="color: white;">Privacy Policy</a>
   </footer>
 </body>
 </html>
