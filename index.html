@@ -11,98 +11,101 @@
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
+      text-align: center;
     }
     header {
-      background-color: #0056b3;
+      background: #0056b3;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 20px 0;
+    }
+    header h1 {
+      margin: 0;
     }
     nav {
-      background-color: #003f8a;
-      padding: 10px;
-      text-align: center;
+      margin-top: 20px;
     }
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      padding: 10px 15px;
+      display: inline-block;
     }
     nav a:hover {
-      text-decoration: underline;
+      background-color: #003f8a;
+      border-radius: 5px;
+    }
+    nav .disabled-link {
+      cursor: default;
+      pointer-events: none;
+    }
+    nav .disabled-link::after {
+      content: " ▼";
+      font-size: 0.8em;
+      color: white;
     }
     .dropdown {
-      position: relative;
       display: inline-block;
+      position: relative;
     }
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #f9f9f9;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      padding: 12px;
+      background-color: #f4f4f4;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       z-index: 1;
+      text-align: left;
+    }
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
     }
     .dropdown:hover .dropdown-content {
       display: block;
     }
-    .dropdown .disabled-link {
-      pointer-events: none;
-      color: white;
-      cursor: default;
-      text-decoration: none;
-    }
-    .dropdown-content a {
-      color: #0056b3;
-      text-decoration: none;
-      display: block;
-      margin: 5px 0;
-    }
-    .dropdown-content a:hover {
-      text-decoration: underline;
-    }
     section {
-      max-width: 800px;
       margin: 20px auto;
       padding: 20px;
-      background-color: white;
+      max-width: 600px;
+      background: white;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #0056b3;
-      color: white;
       margin-top: 20px;
+      font-size: 0.9em;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="82D8963E-6935-4292-B8A4-9AA118CB2770.WEBP" alt="Master Clean HQ Logo" style="width: 120px; height: auto;">
     <h1>Welcome to MasterClean HQ</h1>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <div class="dropdown">
-      <a class="disabled-link">Services</a>
-      <div class="dropdown-content">
-        <a href="commercial-cleaning.html">Commercial Cleaning</a>
-        <a href="post-construction-cleaning.html">Post-Construction Cleaning</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="dropdown">
+        <a class="disabled-link">Services</a>
+        <div class="dropdown-content">
+          <a href="commercial-cleaning.html">Commercial Cleaning</a>
+          <a href="post-construction-cleaning.html">Post-Construction Cleaning</a>
+        </div>
       </div>
-    </div>
-    <a href="contact.html">Contact</a>
-  </nav>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
   <section>
     <h2>Your Commercial Cleaning Solution</h2>
-    <p>
-      We specialize in professional non-residential cleaning services for businesses of all sizes. Let us handle your cleaning needs while you focus on what matters most — your business.
-    </p>
+    <p>We specialize in professional non-residential cleaning services for businesses of all sizes. Let us handle your cleaning needs while you focus on what matters most — your business.</p>
   </section>
   <footer>
-    © 2024 MasterClean HQ. All Rights Reserved. | <a href="privacy-policy.html" style="color: white;">Privacy Policy</a>
+    © 2024 MasterClean HQ. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a>
   </footer>
 </body>
 </html>
