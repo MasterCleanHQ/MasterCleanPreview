@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commercial Cleaning - MasterClean HQ</title>
+  <title>Commercial Cleaning | MasterClean HQ</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,39 +13,82 @@
       color: #333;
     }
     header {
-      background-color: #0056b3;
+      background: #0056b3;
       color: white;
-      padding: 20px;
+      padding: 20px 0;
       text-align: center;
     }
+    header h1 {
+      margin: 0;
+    }
     nav {
-      background-color: #003f8a;
-      padding: 10px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #0056b3;
+      padding: 10px 0;
     }
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
     }
     nav a:hover {
-      text-decoration: underline;
+      background: #003f8a;
     }
-    section {
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #333;
+      padding: 8px 12px;
+      display: block;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .disabled-link {
+      cursor: default;
+      pointer-events: none;
+    }
+    .disabled-link::after {
+      content: " ▼";
+      font-size: 0.8em;
+      color: white;
+    }
+    main {
+      padding: 20px;
       max-width: 800px;
       margin: 20px auto;
-      padding: 20px;
-      background-color: white;
+      background: white;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
     footer {
       text-align: center;
-      padding: 10px;
-      background-color: #0056b3;
-      color: white;
       margin-top: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+    footer a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -56,32 +99,31 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="services.html">Services</a>
+    <div class="dropdown">
+      <a class="disabled-link">Services</a>
+      <div class="dropdown-content">
+        <a href="commercial-cleaning.html">Commercial Cleaning</a>
+        <a href="post-construction-cleaning.html">Post-Construction Cleaning</a>
+      </div>
+    </div>
     <a href="contact.html">Contact</a>
   </nav>
-  <section>
-    <h2>Commercial Cleaning Services</h2>
-    <p>
-      At MasterClean HQ, we provide top-notch commercial cleaning services tailored to meet the needs of businesses of all sizes. From offices to retail spaces, we ensure your environment is clean, safe, and welcoming for employees and customers alike.
-    </p>
-    <h3>Our Services Include:</h3>
+  <main>
+    <h2>Commercial Cleaning</h2>
+    <p>At MasterClean HQ, we specialize in providing top-notch commercial cleaning services tailored to your business needs. Our team is trained to handle a wide variety of commercial spaces, ensuring a clean and professional environment for your employees and customers.</p>
+    <p>Our services include:</p>
     <ul>
-      <li>Office Cleaning</li>
-      <li>Restroom Sanitation</li>
-      <li>Floor Cleaning and Maintenance</li>
-      <li>Window Cleaning</li>
-      <li>Trash Removal</li>
-      <li>Customized Cleaning Plans</li>
+      <li>Regular office cleaning and maintenance</li>
+      <li>Restroom sanitization and restocking</li>
+      <li>Floor care, including vacuuming, mopping, and polishing</li>
+      <li>Trash removal and recycling</li>
+      <li>Cleaning and disinfecting common areas and high-touch surfaces</li>
     </ul>
-    <p>
-      We understand the importance of maintaining a clean workspace. Let us handle the cleaning, so you can focus on running your business.
-    </p>
-    <p>
-      <a href="contact.html" style="color: #0056b3; text-decoration: underline;">Get in touch with us</a> to learn more about how we can assist with your commercial cleaning needs.
-    </p>
-  </section>
+    <p>We understand that every business has unique cleaning requirements. That’s why we offer flexible scheduling and customized cleaning plans to meet your specific needs.</p>
+    <p><strong>Contact us today</strong> to learn more about how we can help keep your commercial space spotless and inviting!</p>
+  </main>
   <footer>
-    © 2024 MasterClean HQ. All Rights Reserved.
+    <p>&copy; 2024 MasterClean HQ. All Rights Reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
   </footer>
 </body>
 </html>
